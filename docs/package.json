@@ -1,0 +1,15 @@
+{
+  "name": "@qinguan/design-system-docs",
+  "version": "0.0.1-alpha.1",
+  "author": "Qin Guan",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "1.0.0-rc.20",
+    "vue": "^3.3.4"
+  }
+}
