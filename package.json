@@ -1,5 +1,5 @@
 {
-  "name": "@qinguan/design-system",
+  "name": "@qinguan/design-system-source",
   "type": "module",
   "version": "0.0.1-alpha.1",
   "packageManager": "pnpm@8.8.0",
@@ -12,54 +12,26 @@
   },
   "bugs": "https://github.com/qin-guan/design-system/issues",
   "keywords": [],
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
+    "all": "pnpm -r --filter=./packages/* run",
+    "dev": "nr all dev",
+    "build": "nr all build",
     "lint": "eslint .",
-    "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
-    "start": "esno src/index.ts",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "nr all build",
+    "release": "nr all release",
+    "test": "nr all test",
+    "typecheck": "nr all typecheck",
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^1.0.0-beta.21",
     "@antfu/ni": "^0.21.8",
     "@antfu/utils": "^0.7.6",
-    "@types/node": "^20.8.3",
     "bumpp": "^9.2.0",
     "eslint": "^8.51.0",
-    "esno": "^0.17.0",
     "lint-staged": "^14.0.1",
     "rimraf": "^5.0.5",
-    "simple-git-hooks": "^2.9.0",
-    "typescript": "^5.2.2",
-    "unbuild": "^2.0.0",
-    "vite": "^4.4.11",
-    "vitest": "^0.34.6"
+    "simple-git-hooks": "^2.9.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
