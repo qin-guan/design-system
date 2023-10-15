@@ -62,6 +62,9 @@ importers:
       pathe:
         specifier: ^1.1.1
         version: 1.1.1
+      prettier:
+        specifier: ^3.0.3
+        version: 3.0.3
       style-dictionary:
         specifier: ^3.8.0
         version: 3.8.0
@@ -129,6 +132,15 @@ importers:
       vitest:
         specifier: ^0.34.6
         version: 0.34.6
+
+  packages/tokens:
+    devDependencies:
+      '@antfu/ni':
+        specifier: ^0.21.8
+        version: 0.21.8
+      '@qinguan/design-system-cli':
+        specifier: workspace:*
+        version: link:../cli
 
 packages:
 
@@ -3825,6 +3837,12 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
     dev: true
+
+  /prettier@3.0.3:
+    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: false
 
   /pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}

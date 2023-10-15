@@ -1,0 +1,28 @@
+{
+  "name": "@qinguan/design-system-tokens",
+  "type": "module",
+  "version": "0.0.1-alpha.1",
+  "packageManager": "pnpm@8.8.0",
+  "author": "Qin Guan",
+  "license": "MIT",
+  "homepage": "https://github.com/qin-guan/design-system",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qin-guan/design-system.git"
+  },
+  "bugs": "https://github.com/qin-guan/design-system/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "pnpm design-system-cli generate ./tokens.json",
+    "build": "nr dev",
+    "postinstall": "nr dev"
+  },
+  "devDependencies": {
+    "@antfu/ni": "^0.21.8",
+    "@qinguan/design-system-cli": "workspace:*"
+  }
+}

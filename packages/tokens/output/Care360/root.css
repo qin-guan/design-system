@@ -1,0 +1,477 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --color-teal-50: #f4f9fa;
+  --color-teal-100: #dfedf0;
+  --color-teal-200: #a0cad2;
+  --color-teal-300: #6caebb;
+  --color-teal-400: #3b92a3;
+  --color-teal-500: #0f7a8f;
+  --color-teal-600: #0b5d6e;
+  --color-teal-700: #0a5260;
+  --color-teal-800: #094653;
+  --color-teal-900: #063039;
+  --color-blue-50: #f1f4fc;
+  --color-blue-100: #e4ebf9;
+  --color-blue-200: #85a4e2;
+  --color-blue-300: #6087d9;
+  --color-blue-400: #4573d2;
+  --color-blue-500: #3d66ba;
+  --color-blue-600: #3457a0;
+  --color-blue-700: #2e4d8c;
+  --color-blue-800: #263f74;
+  --color-blue-900: #1d3058;
+  --color-green-50: #f5faf9;
+  --color-green-100: #ecf6f2;
+  --color-green-200: #97cdbb;
+  --color-green-300: #61b397;
+  --color-green-400: #299873;
+  --color-green-500: #0b7d57;
+  --color-green-600: #096748;
+  --color-green-700: #096144;
+  --color-green-800: #07543b;
+  --color-green-900: #074b35;
+  --color-red-50: #fef9f9;
+  --color-red-100: #fcf0f0;
+  --color-red-200: #efb3b3;
+  --color-red-300: #e68a8a;
+  --color-red-400: #dd5e5e;
+  --color-red-500: #d22c2c;
+  --color-red-600: #b32626;
+  --color-red-700: #a42222;
+  --color-red-800: #8f1e1e;
+  --color-red-900: #801b1b;
+  --color-slate-50: #fafbfc;
+  --color-slate-100: #eef0f3;
+  --color-slate-200: #b2bdc9;
+  --color-slate-300: #8394a8;
+  --color-slate-400: #5e748e;
+  --color-slate-500: #4d6582;
+  --color-slate-600: #435973;
+  --color-slate-700: #3b4f66;
+  --color-slate-800: #344559;
+  --color-slate-900: #2b3849;
+  --color-brand-primary-50: #f1f4fc;
+  --color-brand-primary-100: #e4ebf9;
+  --color-brand-primary-200: #85a4e2;
+  --color-brand-primary-300: #6087d9;
+  --color-brand-primary-400: #6087d9;
+  --color-brand-primary-500: #3d66ba;
+  --color-brand-primary-600: #3457a0;
+  --color-brand-primary-700: #2e4d8c;
+  --color-brand-primary-800: #263f74;
+  --color-brand-primary-900: #1d3058;
+  --color-brand-secondary-50: #fafbfc;
+  --color-brand-secondary-100: #eef0f3;
+  --color-brand-secondary-200: #b2bdc9;
+  --color-brand-secondary-300: #8394a8;
+  --color-brand-secondary-400: #5e748e;
+  --color-brand-secondary-500: #4d6582;
+  --color-brand-secondary-600: #435973;
+  --color-brand-secondary-700: #3b4f66;
+  --color-brand-secondary-800: #344559;
+  --color-brand-secondary-900: #2b3849;
+  --color-base-content-medium: #5e748e;
+  --color-base-content-default: #454953;
+  --color-base-content-strong: #2c2e34;
+  --color-base-content-brand: #3d66ba;
+  --color-base-content-inverse: #ffffff;
+  --color-base-canvas-default: #ffffff;
+  --color-base-canvas-alt: #f8f9f9;
+  --color-base-canvas-backdrop: #ededed;
+  --color-base-canvas-brand-subtle: #f1f4fc;
+  --color-base-canvas-inverse: #3a3e46;
+  --color-base-canvas-overlay: rgba(58, 62, 70, 0.8);
+  --color-base-divider-subtle: #f8f9f9;
+  --color-base-divider-medium: #ededed;
+  --color-base-divider-strong: #bfc2c8;
+  --color-base-divider-inverse: #ffffff;
+  --color-base-divider-brand: #3d66ba;
+  --color-yellow-50: #fffae1;
+  --color-yellow-100: #fff4c6;
+  --color-yellow-200: #e2b73e;
+  --color-yellow-300: #c4992a;
+  --color-yellow-400: #a77c18;
+  --color-yellow-500: #8b6005;
+  --color-yellow-600: #704c00;
+  --color-yellow-700: #624200;
+  --color-yellow-800: #533800;
+  --color-yellow-900: #3f2b00;
+  --color-utility-feedback-warning: #e2b73e;
+  --color-utility-feedback-info: #3d66ba;
+  --color-utility-feedback-info-subtle: #f1f4fc;
+  --color-utility-feedback-warning-subtle: #fffae1;
+  --color-utility-feedback-success: #0b7d57;
+  --color-utility-feedback-success-subtle: #f5faf9;
+  --color-utility-feedback-critical: #d22c2c;
+  --color-utility-feedback-critical-subtle: #fef9f9;
+  --color-utility-focus-default: #3d66ba;
+  --color-utility-focus-inverse: #ffffff;
+  --color-utility-input-prefilled: #fffae1;
+  --color-utility-ui: #ffffff;
+  --color-utility-ui-clear: rgba(255, 255, 255, 0);
+  --color-grey-50: #f8f9f9;
+  --color-grey-100: #ededed;
+  --color-grey-200: #bfc2c8;
+  --color-grey-300: #a0a4ad;
+  --color-grey-400: #838894;
+  --color-grey-500: #666c7a;
+  --color-grey-600: #505660;
+  --color-grey-700: #454953;
+  --color-grey-800: #3a3e46;
+  --color-grey-900: #2c2e34;
+  --color-standard-white: #ffffff;
+  --color-standard-black: #000000;
+  --color-skin-1-base: #ffcaa4;
+  --color-skin-1-shadow: #f5b896;
+  --color-skin-2-base: #eba687;
+  --color-skin-2-shadow: #e29b7b;
+  --color-skin-3-base: #d98f6f;
+  --color-skin-3-shadow: #ce8361;
+  --color-skin-4-base: #bf7657;
+  --color-skin-4-shadow: #af6d53;
+  --color-skin-5-base: #9f634f;
+  --color-skin-5-shadow: #8b5544;
+  --color-skin-6-base: #764738;
+  --color-skin-6-shadow: #633d32;
+  --color-interaction-main-default: #3d66ba;
+  --color-interaction-main-hover: #3457a0;
+  --color-interaction-main-active: #2e4d8c;
+  --color-interaction-main-subtle-default: #e4ebf9;
+  --color-interaction-main-subtle-hover: #85a4e2;
+  --color-interaction-main-subtle-active: #6087d9;
+  --color-interaction-sub-default: #4d6582;
+  --color-interaction-sub-hover: #435973;
+  --color-interaction-sub-active: #3b4f66;
+  --color-interaction-sub-subtle-default: #eef0f3;
+  --color-interaction-sub-subtle-hover: #b2bdc9;
+  --color-interaction-sub-subtle-active: #8394a8;
+  --color-interaction-critical-default: #d22c2c;
+  --color-interaction-critical-hover: #b32626;
+  --color-interaction-critical-active: #a42222;
+  --color-interaction-critical-subtle-default: #fcf0f0;
+  --color-interaction-critical-subtle-hover: #efb3b3;
+  --color-interaction-critical-subtle-active: #e68a8a;
+  --color-interaction-warning-default: #fff4c6;
+  --color-interaction-warning-hover: #e2b73e;
+  --color-interaction-warning-active: #c4992a;
+  --color-interaction-warning-subtle-default: #fffae1;
+  --color-interaction-warning-subtle-hover: #fff4c6;
+  --color-interaction-warning-subtle-active: #e2b73e;
+  --color-interaction-success-default: #0b7d57;
+  --color-interaction-success-hover: #096748;
+  --color-interaction-success-active: #096144;
+  --color-interaction-success-subtle-default: #ecf6f2;
+  --color-interaction-success-subtle-hover: #97cdbb;
+  --color-interaction-success-subtle-active: #61b397;
+  --color-interaction-neutral-default: #666c7a;
+  --color-interaction-neutral-hover: #505660;
+  --color-interaction-neutral-active: #454953;
+  --color-interaction-neutral-subtle-default: #f8f9f9;
+  --color-interaction-neutral-subtle-hover: #ededed;
+  --color-interaction-neutral-subtle-active: #bfc2c8;
+  --color-interaction-muted-main-hover: #f1f4fc;
+  --color-interaction-muted-main-active: #e4ebf9;
+  --color-interaction-muted-sub-hover: #fafbfc;
+  --color-interaction-muted-sub-active: #eef0f3;
+  --color-interaction-muted-critical-hover: #fef9f9;
+  --color-interaction-muted-critical-active: #fcf0f0;
+  --color-interaction-muted-neutral-hover: #f8f9f9;
+  --color-interaction-muted-neutral-active: #ededed;
+  --color-interaction-tinted-main-hover: rgba(61, 102, 186, 0.04);
+  --color-interaction-tinted-main-active: rgba(61, 102, 186, 0.12);
+  --color-interaction-tinted-sub-hover: rgba(77, 101, 130, 0.04);
+  --color-interaction-tinted-sub-active: rgba(77, 101, 130, 0.12);
+  --color-interaction-tinted-critical-hover: rgba(210, 44, 44, 0.04);
+  --color-interaction-tinted-critical-active: rgba(210, 44, 44, 0.12);
+  --color-interaction-tinted-neutral-hover: rgba(0, 0, 0, 0.1);
+  --color-interaction-tinted-neutral-active: rgba(0, 0, 0, 0.2);
+  --color-interaction-tinted-inverse-hover: rgba(255, 255, 255, 0.1);
+  --color-interaction-tinted-inverse-active: rgba(255, 255, 255, 0.2);
+  --color-interaction-support-unselected: #a0a4ad;
+  --color-interaction-support-selected: #666c7a;
+  --color-interaction-support-unselected-strong: #666c7a;
+  --color-interaction-support-disabled: #ededed;
+  --color-interaction-support-disabled-content: #a0a4ad;
+  --color-interaction-support-placeholder: #a0a4ad;
+  --color-interaction-links-default: #3d66ba;
+  --color-interaction-links-hover: #3457a0;
+  --color-interaction-links-neutral-default: #454953;
+  --color-interaction-links-neutral-hover: #2c2e34;
+  --color-interaction-links-inverse-default: #ffffff;
+  --color-interaction-links-inverse-hover: #ededed;
+  --typography-font-families-inter: Inter;
+  --typography-font-families-ibmplexmono: IBM Plex Mono;
+  --typography-line-heights-3: 0.75rem;
+  --typography-line-heights-4: 1rem;
+  --typography-line-heights-5: 1.25rem;
+  --typography-line-heights-6: 1.5rem;
+  --typography-line-heights-7: 1.75rem;
+  --typography-line-heights-8: 2rem;
+  --typography-line-heights-9: 2.25rem;
+  --typography-line-heights-10: 2.5rem;
+  --typography-line-heights-11: 2.75rem;
+  --typography-line-heights-12: 3rem;
+  --typography-line-heights-13: 3.25rem;
+  --typography-line-heights-14: 3.5rem;
+  --typography-line-heights-15: 3.75rem;
+  --typography-line-heights-16: 4rem;
+  --typography-line-heights-17: 4.25rem;
+  --typography-line-heights-18: 4.5rem;
+  --typography-font-weights-light: 300;
+  --typography-font-weights-normal: 400;
+  --typography-font-weights-medium: 500;
+  --typography-font-weights-semibold: 600;
+  --typography-font-weights-bold: 700;
+  --typography-font-size-2-xs: 0.625rem;
+  --typography-font-size-xs: 0.75rem;
+  --typography-font-size-sm: 0.875rem;
+  --typography-font-size-md: 1rem;
+  --typography-font-size-lg: 1.125rem;
+  --typography-font-size-xl: 1.25rem;
+  --typography-font-size-2-xl: 1.5rem;
+  --typography-font-size-3-xl: 1.75rem;
+  --typography-font-size-4-xl: 2rem;
+  --typography-font-size-5-xl: 2.25rem;
+  --typography-font-size-6-xl: 2.5rem;
+  --typography-font-size-7-xl: 2.75rem;
+  --typography-font-size-8-xl: 3rem;
+  --typography-font-size-9-xl: 3.5rem;
+  --typography-font-size-10-xl: 4rem;
+  --typography-font-size-11-xl: 4.5rem;
+  --typography-letter-spacing-1: -0.006em;
+  --typography-letter-spacing-2: -0.014em;
+  --typography-letter-spacing-3: -0.019em;
+  --typography-letter-spacing-4: -0.022em;
+  --typography-letter-spacing-wide: 0.08em;
+  --typography-letter-spacing-normal: 0;
+  --typography-paragraph-spacing-0: 0;
+  --typography-text-case-none: none;
+  --typography-text-case-uppercase: uppercase;
+  --typography-text-decoration-none: none;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --spacing-13: 56px;
+  --spacing-14: 64px;
+  --border-radius-default: 4;
+  --border-radius-circle: 50%;
+  --shadow-sm: 0px 0px 10px 0px rgba(191, 191, 191, 0.5);
+  --shadow-md: 0px 0px 20px 0px rgba(104, 104, 104, 0.3);
+  --border-width-default: 1;
+  --border-width-focus: 2;
+}
+.typography-subhead-4 {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: -0.014em;
+}
+.typography-responsive-display-heavy-1280 {
+  font-family: Inter;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-display-heavy-480 {
+  font-family: Inter;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-display-heavy {
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-display-light-1280 {
+  font-family: Inter;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 4.5rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-display-light-480 {
+  font-family: Inter;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 4rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-display-light {
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 3rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-heading-heavy-1280 {
+  font-family: Inter;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-heading-heavy-480 {
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-heading-heavy {
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-heading-light-1280 {
+  font-family: Inter;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 3.5rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-heading-light-480 {
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 3rem;
+  letter-spacing: -0.022em;
+}
+.typography-responsive-heading-light {
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  letter-spacing: -0.022em;
+}
+.typography-h1 {
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  letter-spacing: -0.022em;
+}
+.typography-h2 {
+  font-family: Inter;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 2.75rem;
+  letter-spacing: -0.022em;
+}
+.typography-h3 {
+  font-family: Inter;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  letter-spacing: -0.019em;
+}
+.typography-h4 {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: -0.019em;
+}
+.typography-h5 {
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  letter-spacing: -0.014em;
+}
+.typography-h6 {
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.014em;
+}
+.typography-subhead-1 {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.006em;
+}
+.typography-subhead-2 {
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.typography-subhead-3 {
+  font-family: Inter;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.08em;
+}
+.typography-body-1 {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: -0.006em;
+}
+.typography-body-2 {
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.typography-body-3 {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: -0.006em;
+}
+.typography-caption-1 {
+  font-family: Inter;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+.typography-caption-2 {
+  font-family: Inter;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.typography-code-1 {
+  font-family: IBM Plex Mono;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.typography-code-2 {
+  font-family: IBM Plex Mono;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.typography-legal {
+  font-family: Inter;
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+}

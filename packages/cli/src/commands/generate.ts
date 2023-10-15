@@ -26,25 +26,28 @@ export const generate = new Command()
     )
 
     const transformedTokensPath = join(tokensPath, 'transformed')
-    const cmd = `npx token-transformer ${rawTokensPath} --theme --themeOutputPath=${transformedTokensPath}`
+    const cmd = `pnpm dlx token-transformer ${rawTokensPath} --theme --themeOutputPath=${transformedTokensPath}`
 
     consola.info('Running command: ', cmd)
 
-    await $({ stdio: 'inherit' })`npx token-transformer ${rawTokensPath} --theme --themeOutputPath=${transformedTokensPath}`
+    await $({ stdio: 'inherit' })`pnpm dlx token-transformer ${rawTokensPath} --theme --themeOutputPath=${transformedTokensPath}`
 
     consola.box('Build started...');
 
-    // PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
-    // 
-    const files = await readdir(transformedTokensPath)
+    const files = (await readdir(transformedTokensPath)).map((file) => {
+      return {
+        path: file,
+        name: parse(file).name
+      }
+    })
 
-    files.map((theme) => {
-      consola.log(`\nProcessing: [${theme}]`)
+    files.forEach(({ path, name }) => {
+      consola.log(`\nProcessing: [${name}]`)
 
       StyleDictionary
         .extend({
           source: [
-            join(transformedTokensPath, theme),
+            join(transformedTokensPath, path),
           ],
           platforms: {
             web: {
@@ -63,14 +66,11 @@ export const generate = new Command()
               buildPath: `output/`,
               files: [
                 {
-                  destination: `${theme}/root.css`,
+                  destination: `${name}/root.css`,
                   format: 'css/ogp',
-                  options: {
-                    selector: `.${theme}-theme`,
-                  }
                 },
                 {
-                  destination: `${theme}/tailwind.config.js`,
+                  destination: `${name}/tailwind.config.js`,
                   format: 'tailwind/ogp',
                   options: {
                     file
@@ -84,6 +84,8 @@ export const generate = new Command()
 
       consola.log('\nEnd processing')
     })
+
+    await $({ stdio: 'inherit' })`pnpm dlx prettier ./output --write`
 
     consola.log('\n==============================================')
     consola.log('\nBuild completed!')

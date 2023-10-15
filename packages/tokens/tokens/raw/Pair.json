@@ -1,0 +1,122 @@
+{
+  "color": {
+    "blue": {
+      "50": {
+        "value": "#F4F8FE",
+        "type": "color"
+      },
+      "100": {
+        "value": "#CCE0FC",
+        "type": "color"
+      },
+      "200": {
+        "value": "#A7C9F9",
+        "type": "color"
+      },
+      "300": {
+        "value": "#7CAFF7",
+        "type": "color"
+      },
+      "400": {
+        "value": "#4E93F4",
+        "type": "color"
+      },
+      "500": {
+        "value": "#1F76F1",
+        "type": "color"
+      },
+      "600": {
+        "value": "#065EDB",
+        "type": "color"
+      },
+      "700": {
+        "value": "#054DB4",
+        "type": "color"
+      },
+      "800": {
+        "value": "#043D8F",
+        "type": "color"
+      },
+      "900": {
+        "value": "#022B63",
+        "type": "color"
+      }
+    },
+    "brand": {
+      "primary": {
+        "50": {
+          "value": "{color.blue.50}",
+          "type": "color"
+        },
+        "100": {
+          "value": "{color.blue.100}",
+          "type": "color"
+        },
+        "200": {
+          "value": "{color.blue.200}",
+          "type": "color"
+        },
+        "300": {
+          "value": "{color.blue.300}",
+          "type": "color"
+        },
+        "400": {
+          "value": "{color.blue.400}",
+          "type": "color"
+        },
+        "500": {
+          "value": "{color.blue.500}",
+          "type": "color"
+        },
+        "600": {
+          "value": "{color.blue.600}",
+          "type": "color"
+        },
+        "700": {
+          "value": "{color.blue.700}",
+          "type": "color"
+        },
+        "800": {
+          "value": "{color.blue.800}",
+          "type": "color"
+        },
+        "900": {
+          "value": "{color.blue.900}",
+          "type": "color"
+        }
+      }
+    },
+    "base": {
+      "canvas": {
+        "alt": {
+          "value": "{color.brand.secondary.50}",
+          "type": "color"
+        },
+        "backdrop": {
+          "value": "{color.brand.secondary.100}",
+          "type": "color"
+        },
+        "inverse": {
+          "value": "{color.brand.secondary.700}",
+          "type": "color"
+        },
+        "overlay": {
+          "value": "rgba({color.brand.secondary.700}, 0.8)",
+          "type": "color"
+        }
+      }
+    },
+    "interaction": {
+      "links": {
+        "neutral-default": {
+          "value": "{color.brand.secondary.700}",
+          "type": "color"
+        },
+        "neutral-hover": {
+          "value": "{color.brand.secondary.900}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

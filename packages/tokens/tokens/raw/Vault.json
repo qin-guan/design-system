@@ -1,0 +1,229 @@
+{
+  "color": {
+    "purple": {
+      "50": {
+        "value": "#F9F9FC",
+        "type": "color",
+        "description": "19.98 : 1"
+      },
+      "100": {
+        "value": "#E4e1fb",
+        "type": "color",
+        "description": "16.46 : 1"
+      },
+      "200": {
+        "value": "#c7c1f7",
+        "type": "color",
+        "description": "12.39 : 1"
+      },
+      "300": {
+        "value": "#A89FF2",
+        "type": "color",
+        "description": "8.9 : 1"
+      },
+      "400": {
+        "value": "#877cee",
+        "type": "color",
+        "description": "6.14 : 1"
+      },
+      "500": {
+        "value": "#6253E8",
+        "type": "color",
+        "description": "5.35 : 1"
+      },
+      "600": {
+        "value": "#4D3DD8",
+        "type": "color",
+        "description": "7.05 : 1"
+      },
+      "700": {
+        "value": "#4335BD",
+        "type": "color",
+        "description": "8.45 : 1"
+      },
+      "800": {
+        "value": "#3B2eA4",
+        "type": "color",
+        "description": "9.93 : 1"
+      },
+      "900": {
+        "value": "#2B227A",
+        "type": "color",
+        "description": "13.02 : 1"
+      }
+    },
+    "brand": {
+      "primary": {
+        "50": {
+          "value": "{color.purple.50}",
+          "type": "color"
+        },
+        "100": {
+          "value": "{color.purple.100}",
+          "type": "color"
+        },
+        "200": {
+          "value": "{color.purple.200}",
+          "type": "color"
+        },
+        "300": {
+          "value": "{color.purple.300}",
+          "type": "color"
+        },
+        "400": {
+          "value": "{color.purple.400}",
+          "type": "color"
+        },
+        "500": {
+          "value": "{color.purple.500}",
+          "type": "color"
+        },
+        "600": {
+          "value": "{color.purple.600}",
+          "type": "color"
+        },
+        "700": {
+          "value": "{color.purple.700}",
+          "type": "color"
+        },
+        "800": {
+          "value": "{color.purple.800}",
+          "type": "color"
+        },
+        "900": {
+          "value": "{color.purple.900}",
+          "type": "color"
+        }
+      },
+      "secondary": {
+        "50": {
+          "value": "{color.grey.50}",
+          "type": "color"
+        },
+        "100": {
+          "value": "{color.grey.100}",
+          "type": "color"
+        },
+        "200": {
+          "value": "{color.grey.200}",
+          "type": "color"
+        },
+        "300": {
+          "value": "{color.grey.300}",
+          "type": "color"
+        },
+        "400": {
+          "value": "{color.grey.400}",
+          "type": "color"
+        },
+        "500": {
+          "value": "{color.grey.500}",
+          "type": "color"
+        },
+        "600": {
+          "value": "{color.grey.600}",
+          "type": "color"
+        },
+        "700": {
+          "value": "{color.grey.700}",
+          "type": "color"
+        },
+        "800": {
+          "value": "{color.grey.800}",
+          "type": "color"
+        },
+        "900": {
+          "value": "{color.grey.900}",
+          "type": "color"
+        }
+      }
+    },
+    "grey": {
+      "50": {
+        "value": "#F9F9F9",
+        "type": "color"
+      },
+      "100": {
+        "value": "#E9EAEE",
+        "type": "color"
+      },
+      "200": {
+        "value": "#BFBFBF",
+        "type": "color"
+      },
+      "300": {
+        "value": "#A0A0A0",
+        "type": "color"
+      },
+      "400": {
+        "value": "#848484",
+        "type": "color"
+      },
+      "500": {
+        "value": "#686868",
+        "type": "color"
+      },
+      "600": {
+        "value": "#535353",
+        "type": "color"
+      },
+      "700": {
+        "value": "#474747",
+        "type": "color"
+      },
+      "800": {
+        "value": "#3D3D3D",
+        "type": "color"
+      },
+      "900": {
+        "value": "#2E2E2E",
+        "type": "color"
+      }
+    },
+    "chart": {
+      "sky": {
+        "value": "#61B8F6",
+        "type": "color"
+      },
+      "bumblebee": {
+        "value": "#EFC200",
+        "type": "color"
+      },
+      "pink": {
+        "value": "#DA627D",
+        "type": "color"
+      },
+      "pandan": {
+        "value": "#00CB2D",
+        "type": "color"
+      },
+      "violet": {
+        "value": "#7731BE",
+        "type": "color"
+      }
+    }
+  },
+  "typography": {
+    "subhead-1": {
+      "value": {
+        "fontWeight": "{typography.fontWeights.semibold}"
+      },
+      "type": "typography",
+      "description": "This is for non-paragraph copy which requires more emphasis, such as subheadings, labels, buttons."
+    },
+    "subhead-2": {
+      "value": {
+        "fontWeight": "{typography.fontWeights.semibold}"
+      },
+      "type": "typography",
+      "description": "This is for the same use as subhead-1, except on smaller, denser interfaces."
+    },
+    "h6": {
+      "value": {
+        "fontWeight": "{typography.fontWeights.semibold}",
+        "letterSpacing": "{typography.letterSpacing.1}"
+      },
+      "type": "typography"
+    }
+  }
+}
