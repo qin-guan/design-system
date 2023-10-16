@@ -70,7 +70,7 @@ export const generate = new Command()
                   format: 'css/ogp',
                 },
                 {
-                  destination: `${name}/tailwind.config.js`,
+                  destination: `${name}/theme.js`,
                   format: 'tailwind/ogp',
                   options: {
                     file

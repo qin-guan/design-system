@@ -18,8 +18,7 @@
   ],
   "scripts": {
     "dev": "pnpm design-system-cli generate ./tokens.json",
-    "build": "nr dev",
-    "postinstall": "nr dev"
+    "build": "nr dev"
   },
   "devDependencies": {
     "@antfu/ni": "^0.21.8",

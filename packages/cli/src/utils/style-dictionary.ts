@@ -174,13 +174,6 @@ _StyleDictionary.registerFormat({
 
     const tokens = Object.keys(dictionary.tokens)
 
-    output.push(
-      `/** @type {import('tailwindcss').Config} */`,
-      'module.exports = {',
-      ' theme: {',
-      '   extend: {',
-    )
-
     function resolveKey(k) {
       if (k === 'color') return 'colors'
       if (k === 'shadow') return 'boxShadow'
@@ -191,52 +184,10 @@ _StyleDictionary.registerFormat({
     }
 
     output.push(
-      ...tokens.map((key) => `${camelCase(resolveKey(key))}: ${JSON.stringify(dictionary.tokens[key], undefined, 4)},`),
-      '',
-      '',
+      ...tokens.map((key) => `export const ${camelCase(resolveKey(key))} = ${JSON.stringify(dictionary.tokens[key], undefined, 4)}`),
     )
 
-    output.push(
-      '  },',
-      ' },',
-      ' plugins: []',
-      '}',
-    )
-
-    // output += `${tokens
-    //     .map((key) => {
-    //       return `const ${camelCase(key)} = ${JSON.stringify(
-    //         dictionary.tokens[key],
-    //         undefined,
-    //         4,
-    //       )}`
-    //     })
-    //     .join('\n\n')
-    //   }\n\n`
-    //   + `export const ${options.exportName
-    //   } = {\n${Object.keys(dictionary.tokens)
-    //     .map(k => `  ${camelCase(k)}`)
-    //     .join(', \n')
-    //   }\n};\n`
-
-    // Output the dictionary as a file.
     return output.join('\n')
-    const contents = [
-    ]
-
-    let theme = {}
-    for (const prop of dictionary.allProperties) {
-      theme = prop.path.reduceRight((acc, currentVal) => {
-        return {
-          [currentVal]: acc,
-        }
-      }, theme)
-    }
-
-    console.log(theme)
-
-
-    return contents.join('\n')
   },
 })
 
