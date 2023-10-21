@@ -1,10 +1,10 @@
-import { mkdir, readFile, writeFile, readdir } from 'node:fs/promises'
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { Command } from 'commander'
 import { join, parse } from 'pathe'
-import { StyleDictionary } from '../utils/style-dictionary'
 import { $ } from 'execa'
 import { consola } from 'consola'
+import { StyleDictionary } from '../utils/style-dictionary'
 
 export const generate = new Command()
   .name('generate')
@@ -32,12 +32,12 @@ export const generate = new Command()
 
     await $({ stdio: 'inherit' })`pnpm dlx token-transformer ${rawTokensPath} --theme --themeOutputPath=${transformedTokensPath}`
 
-    consola.box('Build started...');
+    consola.box('Build started...')
 
     const files = (await readdir(transformedTokensPath)).map((file) => {
       return {
         path: file,
-        name: parse(file).name
+        name: parse(file).name,
       }
     })
 
@@ -73,8 +73,8 @@ export const generate = new Command()
                   destination: `${name}/theme.js`,
                   format: 'tailwind/ogp',
                   options: {
-                    file
-                  }
+                    file,
+                  },
                 },
               ],
             },

@@ -1,7 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
-import PrimeVue from 'primevue/config';
+import PrimeVue from 'primevue/config'
 
 import 'virtual:uno.css'
 
@@ -17,12 +17,12 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app }) {
     app.use(PrimeVue, {
       unstyled: true,
       pt: {
-        button
-      }
+        button,
+      },
     })
-  }
+  },
 }

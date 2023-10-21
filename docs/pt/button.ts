@@ -1,11 +1,11 @@
-import { ButtonPassThroughOptions, ButtonProps } from 'primevue/button'
+import type { ButtonPassThroughOptions } from 'primevue/button'
 import { cva } from 'cva'
 
 /**
  * Ref: https://github.com/opengovsg/design-system/blob/f9a9d23e94d4193d180ef514f1632ed2082ad3b8/react/src/theme/components/Button.ts
- * 
+ *
  * For reduced complexity, only colors with stories are implemented currently
- * 
+ *
  * OGP -> PrimeVue
  * Default -> No severity
  * Critical -> Danger
@@ -42,36 +42,42 @@ const button = cva({
       info: 'focus-visible:outline-blue-800',
       inverse: 'focus-visible:outline-white',
       secondary: 'focus-visible:outline-brand-secondary-800',
-      help: 'focus-visible:outline-interaction-warning-active'
+      help: 'focus-visible:outline-interaction-warning-active',
     },
     outlined: {
       true: 'text-base-content-inverse border',
-      false: 'text-base-content-inverse'
+      false: 'text-base-content-inverse',
     },
     size: {
       small: 'h-8 typography-subhead-1 min-h-[2.5rem] min-w-[2.5rem]',
       default: 'typography-subhead-1 min-h-[2.75rem] min-w-[2.75rem]',
       large: 'typography-subhead-1 min-h-[3rem] min-w-[3rem]',
-    }
+    },
   },
   compoundVariants: [
     {
-      severity: 'default', outlined: false, class: [
+      severity: 'default',
+      outlined: false,
+      class: [
         'bg-interaction-main active:bg-interaction-main-active hover:interaction-main-hover',
-        'border-interaction-main active:border-interaction-main-active hover:border-interaction-main-hover'
-      ]
+        'border-interaction-main active:border-interaction-main-active hover:border-interaction-main-hover',
+      ],
     },
     {
-      severity: 'default', outlined: true, class: [
+      severity: 'default',
+      outlined: true,
+      class: [
         'border-interaction-main active:bg-interaction-tinted-main-active hover:bg-interaction-tinted-main-hover',
-        'text-interaction-main'
-      ]
+        'text-interaction-main',
+      ],
     },
     {
-      severity: 'danger', outlined: false, class: [
+      severity: 'danger',
+      outlined: false,
+      class: [
         'bg-interaction-critical active:bg-interaction-critical-active hover:bg-interaction-critical-hover',
-        'border-interaction-critical active:border-interaction-critical-active hover:border-interaction-critical-hover'
-      ]
+        'border-interaction-critical active:border-interaction-critical-active hover:border-interaction-critical-hover',
+      ],
     },
     { severity: 'danger', outlined: true, class: '' },
     { severity: 'success', outlined: false, class: '' },
@@ -84,11 +90,11 @@ const button = cva({
     { severity: 'secondary', outlined: true, class: '' },
     { severity: 'help', outlined: false, class: '' },
     { severity: 'help', outlined: true, class: '' },
-  ]
+  ],
 })
 
 const options: ButtonPassThroughOptions = {
-  root({ props, context }) {
+  root({ props }) {
     return {
       class: button({
         outlined: props.outlined,
@@ -96,7 +102,7 @@ const options: ButtonPassThroughOptions = {
         severity: props.severity ?? 'default',
       }),
     }
-  }
+  },
 }
 
 export default options

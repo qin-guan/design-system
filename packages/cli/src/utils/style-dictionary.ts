@@ -1,6 +1,6 @@
-import _StyleDictionary from "style-dictionary"
+import _StyleDictionary from 'style-dictionary'
 import tinycolor from 'tinycolor2'
-import { isObject, camelCase, kebabCase, omit } from 'lodash-es'
+import { camelCase, isObject, kebabCase } from 'lodash-es'
 
 import { fontWeightToNumber, percentToEm, pxToRem } from '../utils/fns'
 
@@ -91,13 +91,13 @@ _StyleDictionary.registerTransform({
 
 _StyleDictionary.registerFormat({
   name: 'css/ogp',
-  formatter({ dictionary, options }) {
+  formatter({ dictionary }) {
     const css = [
       '@tailwind base;',
       '@tailwind components;',
       '@tailwind utilities;',
       '',
-      `:root {`
+      `:root {`,
     ]
 
     const prefixedCss = []
@@ -107,9 +107,10 @@ _StyleDictionary.registerFormat({
         prefixedCss.push(
           ` .${prop.name} {`,
           Object.keys(prop.value).filter(key => !!prop.value[key]).map(key => `    ${kebabCase(key)}: ${prop.value[key]};`).join('\n'),
-          ' }'
+          ' }',
         )
-      } else {
+      }
+      else {
         css.push(`  --${kebabCase(prop.path.join('-'))}: ${prop.value};`)
       }
     }
@@ -117,12 +118,12 @@ _StyleDictionary.registerFormat({
     css.push('}')
 
     css.push(...prefixedCss)
-    
+
     css.push(
       '.transition-common {',
       ' transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,outline,transform',
       ' transition-duration: 200ms',
-      '}'
+      '}',
     )
 
     return css.join('\n')
@@ -137,8 +138,8 @@ _StyleDictionary.registerFormat({
       Object.keys(obj).forEach((key) => {
         if (isObject(obj[key]) && obj[key].value !== undefined) {
           if (key === 'default') {
-            obj['DEFAULT'] = `var(--${kebabCase(obj[key].path.join('-'))})`
-            delete obj['default']
+            obj.DEFAULT = `var(--${kebabCase(obj[key].path.join('-'))})`
+            delete obj.default
           }
           else {
             obj[key] = `var(--${kebabCase(obj[key].path.join('-'))})`
@@ -158,41 +159,48 @@ _StyleDictionary.registerFormat({
       dictionary.tokens = {
         ...dictionary.tokens,
         ...(
-          dictionary.tokens.typography && Object.keys(dictionary.tokens['typography']).filter(key =>
-            key === 'fontFamily' ||
-            key === 'lineHeights' ||
-            key === 'fontWeights' ||
-            key === 'fontSizes' ||
-            key === 'letterSpacings' ||
-            key === 'textTransforms').reduce((acc, key) => ({
-              ...acc,
-              [key]: dictionary.tokens['typography'][key]
-            }), {})
+          dictionary.tokens.typography && Object.keys(dictionary.tokens.typography).filter(key =>
+            key === 'fontFamily'
+            || key === 'lineHeights'
+            || key === 'fontWeights'
+            || key === 'fontSizes'
+            || key === 'letterSpacings'
+            || key === 'textTransforms').reduce((acc, key) => ({
+            ...acc,
+            [key]: dictionary.tokens.typography[key],
+          }), {})
         ),
       }
-    } catch (e) {
+    }
+    catch (e) {
+      // eslint-disable-next-line no-console
       console.log(dictionary.tokens)
     }
 
-    delete dictionary.tokens['typography']
+    delete dictionary.tokens.typography
 
     const output = [
-      fileHeader({ file: options.file })
+      fileHeader({ file: options.file }),
     ]
 
     const tokens = Object.keys(dictionary.tokens)
 
     function resolveKey(k) {
-      if (k === 'color') return 'colors'
-      if (k === 'shadow') return 'boxShadow'
-      if (k === 'fontFamilies') return 'fontFamily'
-      if (k === 'fontWeights') return 'fontWeight'
-      if (k === 'lineHeights') return 'lineHeight'
+      if (k === 'color')
+        return 'colors'
+      if (k === 'shadow')
+        return 'boxShadow'
+      if (k === 'fontFamilies')
+        return 'fontFamily'
+      if (k === 'fontWeights')
+        return 'fontWeight'
+      if (k === 'lineHeights')
+        return 'lineHeight'
       return k
     }
 
     output.push(
-      ...tokens.map((key) => `export const ${camelCase(resolveKey(key))} = ${JSON.stringify(dictionary.tokens[key], undefined, 4)}`),
+      ...tokens.map(key => `export const ${camelCase(resolveKey(key))} = ${JSON.stringify(dictionary.tokens[key], undefined, 4)}`),
     )
 
     return output.join('\n')
