@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import UnoCSS from 'unocss/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -8,21 +9,25 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Components', link: '/components/button' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Components',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Button', link: '/components/button' },
         ]
       }
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+    ]
+  },
+  vite: {
+    plugins: [
+      UnoCSS()
     ]
   }
 })

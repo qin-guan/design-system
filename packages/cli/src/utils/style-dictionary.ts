@@ -96,6 +96,7 @@ _StyleDictionary.registerFormat({
       '@tailwind base;',
       '@tailwind components;',
       '@tailwind utilities;',
+      '',
       `:root {`
     ]
 
@@ -116,6 +117,13 @@ _StyleDictionary.registerFormat({
     css.push('}')
 
     css.push(...prefixedCss)
+    
+    css.push(
+      '.transition-common {',
+      ' transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,outline,transform',
+      ' transition-duration: 200ms',
+      '}'
+    )
 
     return css.join('\n')
   },

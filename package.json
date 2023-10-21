@@ -14,6 +14,7 @@
   "keywords": [],
   "scripts": {
     "all": "pnpm -r --filter=./packages/* run",
+    "docs": "pnpm -r --filter=./docs run",
     "dev": "nr all dev",
     "build": "nr all build",
     "lint": "eslint .",
@@ -21,7 +22,6 @@
     "release": "nr all release",
     "test": "nr all test",
     "typecheck": "nr all typecheck",
-    "docs": "pnpm -r --filter=./docs run",
     "docs:dev": "nr docs dev",
     "docs:build": "nr docs build",
     "docs:preview": "nr docs preview",
