@@ -1,16 +1,29 @@
+# Nuxt
+.output
+.data
+.nuxt
+.nitro
 .cache
-.DS_Store
-.idea
-*.log
-*.tgz
-coverage
 dist
-lib-cov
-logs
+
+# Node dependencies
 node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+*.tgz
+.DS_Store
+.fleet
+.idea
+coverage
+lib-cov
 temp
 
-# VitePress
-docs/.vitepress/cache
-docs/.vitepress/dist
-docs/.vitepress/.temp
+# Local env files
+.env
+.env.*
+!.env.example
+
