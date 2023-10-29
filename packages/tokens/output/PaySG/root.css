@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --color-blue-50: #f3f7ff;
   --color-blue-100: #e1e9fe;
@@ -52,4 +53,9 @@
   --color-brand-primary-700: #153493;
   --color-brand-primary-800: #10256f;
   --color-brand-primary-900: #091747;
+}
+.transition-common {
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, outline, transform;
+  transition-duration: 200ms;
 }

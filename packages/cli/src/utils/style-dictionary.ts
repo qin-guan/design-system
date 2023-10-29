@@ -121,8 +121,8 @@ _StyleDictionary.registerFormat({
 
     css.push(
       '.transition-common {',
-      ' transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,outline,transform',
-      ' transition-duration: 200ms',
+      ' transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,outline,transform;',
+      ' transition-duration: 200ms;',
       '}',
     )
 

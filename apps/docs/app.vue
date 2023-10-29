@@ -1,5 +1,7 @@
 <template>
   <div>
-    <NuxtWelcome />
+    <PrimeButton severity="">
+      hello
+    </PrimeButton>
   </div>
 </template>
